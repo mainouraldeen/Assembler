@@ -6,11 +6,11 @@ its corresponding machine code.The required instructions are
 3. J-type instruction: j. 
 
 3.1 User Input 
-• The user code consists of data declarations followed by a program code
-• The data declaration starts with an assembler directive .data
-• The code starts with assembler directive .text
+â€¢ The user code consists of data declarations followed by a program code
+â€¢ The data declaration starts with an assembler directive .data
+â€¢ The code starts with assembler directive .text
 3.2 Project output 
-• Your assembler should output the binary translation of each segment in two 
+â€¢ Your assembler should output the binary translation of each segment in two 
 separate textboxes or text file. Each segment contains n lines consisting of 32 
 binary digits 
 3.3 High-level Tasks
@@ -42,13 +42,13 @@ on the given storage type. Storage types are either .word or .space as explained
 later.
 3.3.2 Data Declarations
 Format for declarations: name: data_type value(s)
-• create storage for variable of the specified type with given name and specified 
+â€¢ create storage for variable of the specified type with given name and specified 
 value
-• Storage types are:
+â€¢ Storage types are:
 o .word value which allocates 4 bytes of memory and fill them by the 
 given initial value
 o .space n which allocates n uninitialized words (n*4 bytes). 
-• value(s) usually gives initial value(s); for storage type .space, gives number of 
+â€¢ value(s) usually gives initial value(s); for storage type .space, gives number of 
 spaces to be allocated
 Examples:
 var1: .word 3 # create a single integer variable (4 bytes) with initial value 3
@@ -59,7 +59,7 @@ Once labels are recognized and their addresses are recorded, you can translate t
 assembly instructions into their binary code. You should have a hash table of 
 instruction names and its corresponding opcode and funct and another hash table for 
 registers and their regcodes. 
-• R-type: map instructions and registers to their corresponding binary codes. 
+â€¢ R-type: map instructions and registers to their corresponding binary codes. 
 I-Type: translate the immediate value (in addi), the offset (in lw/sw) or the 
 relative address of the label (in beq/bne) into their binary value. 
-• J-type: translate the direct the address of the label into binary
+â€¢ J-type: translate the direct the address of the label into binary.
